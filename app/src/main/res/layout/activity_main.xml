@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="tk.melnichuk.jobsniffer.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        android:popupTheme="@style/AppTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:imeOptions="flagNoExtractUi"
+            android:background="@drawable/rounded_corners_edittext"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:id="@+id/text_search"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:background="@drawable/icon_background"
+            android:src="@mipmap/ic_search_white_48dp"
+            android:padding="6dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_search"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:background="@drawable/icon_background"
+            android:src="@mipmap/ic_more_vert_white_48dp"
+            android:padding="6dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_menu"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        android:gravity="center"
+        android:background="@color/pagination_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="---"
+        android:id="@+id/pagination"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/pagination">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/no_jobs_found"
+        android:id="@+id/no_jobs_found"
+        android:layout_centerInParent="true" />
+
+
+
+
+</RelativeLayout>

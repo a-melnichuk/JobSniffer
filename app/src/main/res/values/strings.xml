@@ -1,0 +1,980 @@
+<resources>
+    <string name="app_name">JobSniffer</string>
+    <string name="search_filter">Фільтр пошуку</string>
+    <string name="no_jobs_found">Вакансій не знайдено</string>
+    <string name="err_unknown">Помилка</string>
+    <string name="err_connection">Помилка з\'єднання</string>
+    <string name="err_http">Помилка запиту</string>
+    <string name="location">Місто або Область</string>
+    <string name="salary">Зарплатня</string>
+    <string name="radius">Відстань від міста (км)</string>
+    <string name="filter">Пошуковий фільтр</string>
+    <string name="filter_use">Застосувати</string>
+    <string name="filter_cancel">Відміна</string>
+    <string name="options_add_filter">Додати фільтр</string>
+    <string name="options_remove_filter">Видалити фільтр</string>
+
+    <string-array name="dist_list">
+        <item>80</item>
+        <item>40</item>
+        <item>24</item>
+        <item>16</item>
+        <item>8</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="location_list_ru">
+        <item>Авдеевка</item>
+        <item>Александрия</item>
+        <item>Александровск</item>
+        <item>Алмазная</item>
+        <item>Алупка</item>
+        <item>Алушта</item>
+        <item>Алчевск</item>
+        <item>Амвросиевка</item>
+        <item>Ананьев</item>
+        <item>Андрушёвка</item>
+        <item>Антрацит</item>
+        <item>Апостолово</item>
+        <item>Армянск</item>
+        <item>Артёмово</item>
+        <item>Артёмовск</item>
+        <item>Арциз</item>
+        <item>Ахтырка</item>
+        <item>Балаклея</item>
+        <item>Балта</item>
+        <item>Бар</item>
+        <item>Барановка</item>
+        <item>Барвенково</item>
+        <item>Батурин</item>
+        <item>Бахмач</item>
+        <item>Бахмут</item>
+        <item>Бахчисарай</item>
+        <item>Баштанка</item>
+        <item>Белая Церковь</item>
+        <item>Белгород-Днестровский</item>
+        <item>Белз</item>
+        <item>Белицкое</item>
+        <item>Белогорск</item>
+        <item>Белозёрское</item>
+        <item>Белополье</item>
+        <item>Беляевка</item>
+        <item>Бердичев</item>
+        <item>Бердянск</item>
+        <item>Берегово</item>
+        <item>Бережаны</item>
+        <item>Березань</item>
+        <item>Березно</item>
+        <item>Березо́вка</item>
+        <item>Берестечко</item>
+        <item>Бершадь</item>
+        <item>Бобринец</item>
+        <item>Бобрка</item>
+        <item>Бобровица</item>
+        <item>Богодухов</item>
+        <item>Богуслав</item>
+        <item>Болград</item>
+        <item>Болехов</item>
+        <item>Борзна</item>
+        <item>Борислав</item>
+        <item>Борисполь</item>
+        <item>Борщёв</item>
+        <item>Боярка</item>
+        <item>Бровары</item>
+        <item>Броды</item>
+        <item>Брянка</item>
+        <item>Бурштын</item>
+        <item>Бурынь</item>
+        <item>Буск</item>
+        <item>Буча</item>
+        <item>Бучач</item>
+        <item>Валки</item>
+        <item>Васильевка</item>
+        <item>Васильков</item>
+        <item>Ватутино</item>
+        <item>Вахрушево</item>
+        <item>Вашковцы</item>
+        <item>Великие Мосты</item>
+        <item>Верхнеднепровск</item>
+        <item>Верховцево</item>
+        <item>Вижница</item>
+        <item>Вилково</item>
+        <item>Винники</item>
+        <item>Винница</item>
+        <item>Виноградов</item>
+        <item>Вишнёвое</item>
+        <item>Владимир-Волынский</item>
+        <item>Вознесенск</item>
+        <item>Волноваха</item>
+        <item>Волочиск</item>
+        <item>Волчанск</item>
+        <item>Вольногорск</item>
+        <item>Вольнянск</item>
+        <item>Ворожба</item>
+        <item>Вышгород</item>
+        <item>Гадяч</item>
+        <item>Гайворон</item>
+        <item>Гайсин</item>
+        <item>Галич</item>
+        <item>Геническ</item>
+        <item>Герца</item>
+        <item>Глобино</item>
+        <item>Глухов</item>
+        <item>Глиняны</item>
+        <item>Гнивань</item>
+        <item>Голая Пристань</item>
+        <item>Горловка</item>
+        <item>Горное</item>
+        <item>Горняк</item>
+        <item>Городенка</item>
+        <item>Городище</item>
+        <item>Городня</item>
+        <item>Городок</item>
+        <item>Городок</item>
+        <item>Горохов</item>
+        <item>Гребёнка</item>
+        <item>Гуляйполе</item>
+        <item>Дебальцево</item>
+        <item>Деражня</item>
+        <item>Дергачи</item>
+        <item>Джанкой[27]</item>
+        <item>Димитров</item>
+        <item>Днепродзержинск</item>
+        <item>Днепропетровск</item>
+        <item>Днепрорудное</item>
+        <item>Добромиль</item>
+        <item>Доброполье</item>
+        <item>Докучаевск</item>
+        <item>Долина</item>
+        <item>Долинская</item>
+        <item>Донецк</item>
+        <item>Дрогобыч</item>
+        <item>Дружба</item>
+        <item>Дружковка</item>
+        <item>Дубляны</item>
+        <item>Дубно</item>
+        <item>Дубровица</item>
+        <item>Дунаевцы</item>
+        <item>Евпатория</item>
+        <item>Енакиево</item>
+        <item>Жашков</item>
+        <item>Ждановка</item>
+        <item>Жёлтые Воды</item>
+        <item>Жидачов</item>
+        <item>Житомир</item>
+        <item>Жмеринка</item>
+        <item>Жолква</item>
+        <item>Заводское</item>
+        <item>Залещики</item>
+        <item>Запорожье</item>
+        <item>Заставна</item>
+        <item>Збараж</item>
+        <item>Зборов</item>
+        <item>Звенигородка</item>
+        <item>Здолбунов</item>
+        <item>Зеленодольск</item>
+        <item>Зеньков</item>
+        <item>Зимогорье</item>
+        <item>Змиёв</item>
+        <item>Знаменка</item>
+        <item>Золотое</item>
+        <item>Золотоноша</item>
+        <item>Золочев</item>
+        <item>Зоринск</item>
+        <item>Зугрэс</item>
+        <item>Ивано-Франковск</item>
+        <item>Измаил</item>
+        <item>Изюм</item>
+        <item>Изяслав</item>
+        <item>Ильинцы</item>
+        <item>Инкерман</item>
+        <item>Ирмино</item>
+        <item>Ирпень</item>
+        <item>Иршава</item>
+        <item>Ичня</item>
+        <item>Кагарлык</item>
+        <item>Казатин</item>
+        <item>Калиновка</item>
+        <item>Калуш</item>
+        <item>Каменец-Подольский</item>
+        <item>Каменка</item>
+        <item>Каменка-Бугская</item>
+        <item>Каменка-Днепровская</item>
+        <item>Камень-Каширский</item>
+        <item>Канев</item>
+        <item>Карловка</item>
+        <item>Каховка</item>
+        <item>Керчь</item>
+        <item>Киверцы</item>
+        <item>Киев</item>
+        <item>Килия</item>
+        <item>Кировоград</item>
+        <item>Кировск</item>
+        <item>Кировское</item>
+        <item>Кицмань</item>
+        <item>Кобеляки</item>
+        <item>Ковель</item>
+        <item>Кодыма</item>
+        <item>Коломыя</item>
+        <item>Комсомольск</item>
+        <item>Конотоп</item>
+        <item>Константиновка</item>
+        <item>Корец</item>
+        <item>Коростень</item>
+        <item>Коростышев</item>
+        <item>Корсунь-Шевченковский</item>
+        <item>Корюковка</item>
+        <item>Косов</item>
+        <item>Костополь</item>
+        <item>Котовск</item>
+        <item>Краматорск</item>
+        <item>Красилов</item>
+        <item>Красноармейск</item>
+        <item>Красноград</item>
+        <item>Краснодон</item>
+        <item>Краснопартизанск</item>
+        <item>Красноперекопск</item>
+        <item>Красный Луч</item>
+        <item>Кременец</item>
+        <item>Кременчуг</item>
+        <item>Кривой Рог</item>
+        <item>Кролевец</item>
+        <item>Кузнецовск</item>
+        <item>Купянск</item>
+        <item>Ладыжин</item>
+        <item>Лановцы</item>
+        <item>Лебедин</item>
+        <item>Лиман</item>
+        <item>Лисичанск</item>
+        <item>Лозовая</item>
+        <item>Лохвица</item>
+        <item>Лубны</item>
+        <item>Луганск</item>
+        <item>Лутугино</item>
+        <item>Луцк</item>
+        <item>Львов</item>
+        <item>Любомль</item>
+        <item>Люботин</item>
+        <item>Малин</item>
+        <item>Марганец</item>
+        <item>Мариуполь</item>
+        <item>Макеевка</item>
+        <item>Малая Виска</item>
+        <item>Мелитополь</item>
+        <item>Мена</item>
+        <item>Мерефа</item>
+        <item>Миргород</item>
+        <item>Мироновка</item>
+        <item>Миусинск</item>
+        <item>Могилёв-Подольский</item>
+        <item>Молодогвардейск</item>
+        <item>Молочанск</item>
+        <item>Монастыриска</item>
+        <item>Монастырище</item>
+        <item>Мостиска</item>
+        <item>Мукачево</item>
+        <item>Надворная</item>
+        <item>Николаев</item>
+        <item>Николаев</item>
+        <item>Никополь</item>
+        <item>Нежин</item>
+        <item>Немиров</item>
+        <item>Нетешин</item>
+        <item>Новая Каховка</item>
+        <item>Новая Одесса</item>
+        <item>Новый Буг</item>
+        <item>Новоазовск</item>
+        <item>Нововолынск</item>
+        <item>Новгород-Северский</item>
+        <item>Новомиргород</item>
+        <item>Новоград-Волынский</item>
+        <item>Новодружеск</item>
+        <item>Новоднестровск</item>
+        <item>Новомосковск</item>
+        <item>Новопсков</item>
+        <item>Новоселица</item>
+        <item>Новоукраинка</item>
+        <item>Новый Роздол</item>
+        <item>Носовка</item>
+        <item>Обухов</item>
+        <item>Овруч</item>
+        <item>Одесса</item>
+        <item>Орджоникидзе</item>
+        <item>Орехов</item>
+        <item>Острог</item>
+        <item>Очаков</item>
+        <item>Павлоград</item>
+        <item>Первомайск</item>
+        <item>Первомайск</item>
+        <item>Первомайский</item>
+        <item>Перевальск</item>
+        <item>Перемышляны</item>
+        <item>Перечин</item>
+        <item>Перещепино</item>
+        <item>Переяслав-Хмельницкий</item>
+        <item>Першотравенск</item>
+        <item>Петровское</item>
+        <item>Пирятин</item>
+        <item>Погребище</item>
+        <item>Подволочиск</item>
+        <item>Подгайцы</item>
+        <item>Подгородное</item>
+        <item>Пологи</item>
+        <item>Полонное</item>
+        <item>Полтава</item>
+        <item>Попасная</item>
+        <item>Почаев</item>
+        <item>Приволье</item>
+        <item>Прилуки</item>
+        <item>Приморск</item>
+        <item>Припять</item>
+        <item>Пустомыты</item>
+        <item>Путивль</item>
+        <item>Пятихатки</item>
+        <item>Рава-Русская</item>
+        <item>Радехов</item>
+        <item>Радомышль</item>
+        <item>Радивилов</item>
+        <item>Раздельная</item>
+        <item>Рахов</item>
+        <item>Ржищев</item>
+        <item>Рогатин</item>
+        <item>Ровеньки</item>
+        <item>Ровно</item>
+        <item>Рожище</item>
+        <item>Ромны</item>
+        <item>Рубежное</item>
+        <item>Рудки</item>
+        <item>Саки</item>
+        <item>Самбор</item>
+        <item>Сарны</item>
+        <item>Свалява</item>
+        <item>Сватово</item>
+        <item>Свердловск</item>
+        <item>Светловодск</item>
+        <item>Севастополь</item>
+        <item>Северодонецк</item>
+        <item>Седнев</item>
+        <item>Селидово</item>
+        <item>Семёновка</item>
+        <item>Середина-Буда</item>
+        <item>Симферополь</item>
+        <item>Синельниково</item>
+        <item>Скадовск</item>
+        <item>Скалат</item>
+        <item>Сквира</item>
+        <item>Сколе</item>
+        <item>Славута</item>
+        <item>Славутич</item>
+        <item>Славянск</item>
+        <item>Смела</item>
+        <item>Снежное</item>
+        <item>Снигирёвка</item>
+        <item>Снятын</item>
+        <item>Сокаль</item>
+        <item>Сокиряны</item>
+        <item>Соледар</item>
+        <item>Старобельск</item>
+        <item>Староконстантинов</item>
+        <item>Старый Крым</item>
+        <item>Старый Самбор</item>
+        <item>Стаханов</item>
+        <item>Сторожинец</item>
+        <item>Стрый</item>
+        <item>Судак</item>
+        <item>Сумы</item>
+        <item>Суходольск</item>
+        <item>Счастье</item>
+        <item>Таврийск</item>
+        <item>Тальное</item>
+        <item>Тараща</item>
+        <item>Татарбунары</item>
+        <item>Теплодар</item>
+        <item>Тернополь</item>
+        <item>Терновка</item>
+        <item>Тетиев</item>
+        <item>Тысменица</item>
+        <item>Тлумач</item>
+        <item>Теребовля</item>
+        <item>Тростянец</item>
+        <item>Трускавец</item>
+        <item>Токмак</item>
+        <item>Торез</item>
+        <item>Торецк</item>
+        <item>Тульчин</item>
+        <item>Тячев</item>
+        <item>Угледар</item>
+        <item>Угнев</item>
+        <item>Узин</item>
+        <item>Украинка</item>
+        <item>Ужгород</item>
+        <item>Умань</item>
+        <item>Устилуг</item>
+        <item>Фастов</item>
+        <item>Феодосия</item>
+        <item>Харцызск</item>
+        <item>Харьков</item>
+        <item>Херсон</item>
+        <item>Хмельник</item>
+        <item>Хмельницкий</item>
+        <item>Хорол</item>
+        <item>Хотин</item>
+        <item>Христиновка</item>
+        <item>Хуст</item>
+        <item>Хыров</item>
+        <item>Цюрупинск</item>
+        <item>Червоноград</item>
+        <item>Червонопартизанск</item>
+        <item>Черноморск</item>
+        <item>Черкассы</item>
+        <item>Чернигов</item>
+        <item>Чернобыль</item>
+        <item>Черновцы</item>
+        <item>Чигирин</item>
+        <item>Чоп</item>
+        <item>Чортков</item>
+        <item>Чугуев</item>
+        <item>Шаргород</item>
+        <item>Шахтёрск</item>
+        <item>Шепетовка</item>
+        <item>Шостка</item>
+        <item>Шпола</item>
+        <item>Шумск</item>
+        <item>Щёлкино</item>
+        <item>Щорс</item>
+        <item>Энергодар</item>
+        <item>Южное</item>
+        <item>Южноукраинск</item>
+        <item>Яворов</item>
+        <item>Яготин</item>
+        <item>Ялта</item>
+        <item>Ямполь</item>
+        <item>Яремче</item>
+        <item>Ясиноватая</item>
+
+
+        <item>Одесская область</item>
+        <item>Днепропетровская область</item>
+        <item>Черниговская область</item>
+        <item>Харьковская область</item>
+        <item>Житомирская область</item>
+        <item>Полтавская область</item>
+        <item>Херсонская область</item>
+        <item>Киевская область</item>
+        <item>Запорожская область</item>
+        <item>Луганская область</item>
+        <item>Донецкая область</item>
+        <item>Винницкая область</item>
+        <item>АР Крым</item>
+        <item>Кировоградская область</item>
+        <item>Николаевская область</item>
+        <item>Сумская область</item>
+        <item>Львовская область</item>
+        <item>Черкасская область</item>
+        <item>Хмельницкая область</item>
+        <item>Волынская область</item>
+        <item>Ровенская область</item>
+        <item>Ивано-Франковская область</item>
+        <item>Тернопольская область</item>
+        <item>Закарпатская область</item>
+        <item>Черновицкая область</item>
+
+    </string-array>
+
+    <string-array name="locations_list">
+
+
+
+        <item>Авдіївка</item>
+        <item>Алмазна</item>
+        <item>Алупка</item>
+        <item>Алушта</item>
+        <item>Алчевськ</item>
+        <item>Амвросіївка</item>
+        <item>Ананьїв</item>
+        <item>Андрушівка</item>
+        <item>Антрацит</item>
+        <item>Апостолове</item>
+        <item>Армянськ</item>
+        <item>Артемівськ</item>
+        <item>Артемове</item>
+        <item>Арциз</item>
+        <item>Балаклія</item>
+        <item>Балта</item>
+        <item>Бар</item>
+        <item>Баранівка</item>
+        <item>Барвінкове</item>
+        <item>Батурин</item>
+        <item>Бахмач</item>
+        <item>Бахмут</item>
+        <item>Бахчисарай</item>
+        <item>Баштанка</item>
+        <item>Белз</item>
+        <item>Бердичів</item>
+        <item>Бердянськ</item>
+        <item>Берегове</item>
+        <item>Бережани</item>
+        <item>Березань</item>
+        <item>Березівка</item>
+        <item>Березне</item>
+        <item>Берестечко</item>
+        <item>Берислав</item>
+        <item>Бершадь</item>
+        <item>Бібрка</item>
+        <item>Біла Церква</item>
+        <item>Білгород-Дністровський</item>
+        <item>Білицьке</item>
+        <item>Білогірськ</item>
+        <item>Білозерське</item>
+        <item>Білопілля</item>
+        <item>Біляївка</item>
+        <item>Бобринець</item>
+        <item>Бобровиця</item>
+        <item>Богодухів</item>
+        <item>Богуслав</item>
+        <item>Болград</item>
+        <item>Болехів</item>
+        <item>Борзна</item>
+        <item>Борислав</item>
+        <item>Бориспіль</item>
+        <item>Борщів</item>
+        <item>Боярка</item>
+        <item>Бровари</item>
+        <item>Броди</item>
+        <item>Брянка</item>
+        <item>Буринь</item>
+        <item>Бурштин</item>
+        <item>Буськ</item>
+        <item>Буча</item>
+        <item>Бучач</item>
+        <item>Валки</item>
+        <item>Василівка</item>
+        <item>Васильків</item>
+        <item>Ватутіне</item>
+        <item>Вахрушеве</item>
+        <item>Вашківці</item>
+        <item>Великі Мости</item>
+        <item>Верхівцеве</item>
+        <item>Верхньодніпровськ</item>
+        <item>Вижниця</item>
+        <item>Вилкове</item>
+        <item>Винники</item>
+        <item>Виноградів</item>
+        <item>Вишгород</item>
+        <item>Вишневе</item>
+        <item>Вільногірськ</item>
+        <item>Вільнянськ</item>
+        <item>Вінниця</item>
+        <item>Вовчанськ</item>
+        <item>Вознесенськ</item>
+        <item>Волноваха</item>
+        <item>Володимир-Волинський</item>
+        <item>Волочиськ</item>
+        <item>Ворожба</item>
+        <item>Вуглегірськ</item>
+        <item>Вугледар</item>
+        <item>Гадяч</item>
+        <item>Гайворон</item>
+        <item>Гайсин</item>
+        <item>Галич</item>
+        <item>Генічеськ</item>
+        <item>Герца</item>
+        <item>Гірник</item>
+        <item>Гірське</item>
+        <item>Глиняни</item>
+        <item>Глобине</item>
+        <item>Глухів</item>
+        <item>Гнівань</item>
+        <item>Гола Пристань</item>
+        <item>Горлівка</item>
+        <item>Городенка</item>
+        <item>Городище</item>
+        <item>Городня</item>
+        <item>Городок</item>
+        <item>Городок</item>
+        <item>Горохів</item>
+        <item>Гребінка</item>
+        <item>Гуляйполе</item>
+        <item>Дебальцеве</item>
+        <item>Деражня</item>
+        <item>Дергачі</item>
+        <item>Джанкой</item>
+        <item>Димитров</item>
+        <item>Дніпродзержинськ</item>
+        <item>Дніпропетровськ 2</item>
+        <item>Дніпрорудне</item>
+        <item>Добромиль</item>
+        <item>Добропілля</item>
+        <item>Докучаєвськ</item>
+        <item>Долина</item>
+        <item>Долинська</item>
+        <item>Донецьк</item>
+        <item>Дрогобич</item>
+        <item>Дружба</item>
+        <item>Дружківка</item>
+        <item>Дубляни</item>
+        <item>Дубно</item>
+        <item>Дубровиця</item>
+        <item>Дунаївці</item>
+        <item>Енергодар</item>
+        <item>Євпаторія</item>
+        <item>Єнакієве</item>
+        <item>Жашків</item>
+        <item>Жданівка</item>
+        <item>Жидачів</item>
+        <item>Житомир</item>
+        <item>Жмеринка</item>
+        <item>Жовква</item>
+        <item>Жовті Води</item>
+        <item>Заводське</item>
+        <item>Заліщики</item>
+        <item>Запоріжжя</item>
+        <item>Заставна</item>
+        <item>Збараж</item>
+        <item>Зборів</item>
+        <item>Звенигородка</item>
+        <item>Здолбунів</item>
+        <item>Зеленодольськ</item>
+        <item>Зимогір\'я</item>
+        <item>Зіньків</item>
+        <item>Зміїв</item>
+        <item>Знам\'янка</item>
+        <item>Золоте</item>
+        <item>Золотоноша</item>
+        <item>Золочів</item>
+        <item>Зоринськ</item>
+        <item>Зугрес</item>
+        <item>Івано-Франківськ</item>
+        <item>Ізмаїл</item>
+        <item>Ізюм</item>
+        <item>Ізяслав</item>
+        <item>Іллінці</item>
+        <item>Іловайськ</item>
+        <item>Інкерман</item>
+        <item>Ірміно</item>
+        <item>Ірпінь</item>
+        <item>Іршава</item>
+        <item>Ічня</item>
+        <item>Кагарлик</item>
+        <item>Калинівка</item>
+        <item>Калуш</item>
+        <item>Кам\'янець-Подільський</item>
+        <item>Кам\'янка-Бузька</item>
+        <item>Кам\'янка-Дніпровська</item>
+        <item>Кам\'янка</item>
+        <item>Камінь-Каширський</item>
+        <item>Канів</item>
+        <item>Карлівка</item>
+        <item>Каховка</item>
+        <item>Керч</item>
+        <item>Київ</item>
+        <item>Ківерці</item>
+        <item>Кілія</item>
+        <item>Кіровоград</item>
+        <item>Кіровськ</item>
+        <item>Кіровське</item>
+        <item>Кіцмань</item>
+        <item>Кобеляки</item>
+        <item>Ковель</item>
+        <item>Кодима</item>
+        <item>Козятин</item>
+        <item>Коломия</item>
+        <item>Комарно</item>
+        <item>Комсомольськ</item>
+        <item>Комсомольське</item>
+        <item>Конотоп</item>
+        <item>Копичинці</item>
+        <item>Корець</item>
+        <item>Коростень</item>
+        <item>Коростишів</item>
+        <item>Корсунь-Шевченківський</item>
+        <item>Корюківка</item>
+        <item>Косів</item>
+        <item>Костопіль</item>
+        <item>Костянтинівка</item>
+        <item>Котовськ</item>
+        <item>Краматорськ</item>
+        <item>Красилів</item>
+        <item>Красний Луч</item>
+        <item>Красноармійськ</item>
+        <item>Красногорівка</item>
+        <item>Красноград</item>
+        <item>Краснодон</item>
+        <item>Красноперекопськ</item>
+        <item>Кременець</item>
+        <item>Кременчук</item>
+        <item>Кремінна</item>
+        <item>Кривий Ріг [3]</item>
+        <item>Кролевець</item>
+        <item>Кузнецовськ</item>
+        <item>Куп\'янськ</item>
+        <item>Курахове</item>
+        <item>Ладижин</item>
+        <item>Ланівці</item>
+        <item>Лебедин</item>
+        <item>Лиман</item>
+        <item>Липовець</item>
+        <item>Лисичанськ</item>
+        <item>Лозова</item>
+        <item>Лохвиця</item>
+        <item>Лубни</item>
+        <item>Луганськ</item>
+        <item>Лутугине</item>
+        <item>Луцьк</item>
+        <item>Львів</item>
+        <item>Любомль</item>
+        <item>Люботин</item>
+        <item>Макіївка</item>
+        <item>Мала Виска</item>
+        <item>Малин</item>
+        <item>Мар\'їнка</item>
+        <item>Марганець</item>
+        <item>Маріуполь</item>
+        <item>Мелітополь</item>
+        <item>Мена</item>
+        <item>Мерефа</item>
+        <item>Миколаїв</item>
+        <item>Миколаїв</item>
+        <item>Миколаївка</item>
+        <item>Миргород</item>
+        <item>Миронівка</item>
+        <item>Міусинськ</item>
+        <item>Могилів-Подільський</item>
+        <item>Молодогвардійськ</item>
+        <item>Молочанськ</item>
+        <item>Монастириська</item>
+        <item>Монастирище</item>
+        <item>Моршин</item>
+        <item>Моспине</item>
+        <item>Мостиська</item>
+        <item>Мукачеве</item>
+        <item>Надвірна</item>
+        <item>Немирів</item>
+        <item>Нетішин</item>
+        <item>Ніжин</item>
+        <item>Нікополь</item>
+        <item>Нова Каховка</item>
+        <item>Нова Одеса</item>
+        <item>Новгород-Сіверський</item>
+        <item>Новий Буг</item>
+        <item>Новий Калинів</item>
+        <item>Новий Розділ</item>
+        <item>Новоазовськ</item>
+        <item>Нововолинськ</item>
+        <item>Новоград-Волинський</item>
+        <item>Новогродівка</item>
+        <item>Новодністровськ</item>
+        <item>Новодружеськ</item>
+        <item>Новомиргород</item>
+        <item>Новомосковськ</item>
+        <item>Новоселиця</item>
+        <item>Новоукраїнка</item>
+        <item>Новояворівськ</item>
+        <item>Носівка</item>
+        <item>Обухів</item>
+        <item>Овруч</item>
+        <item>Одеса</item>
+        <item>Олевськ</item>
+        <item>Олександрівськ</item>
+        <item>Олександрія</item>
+        <item>Оріхів</item>
+        <item>Остер</item>
+        <item>Острог</item>
+        <item>Охтирка</item>
+        <item>Очаків</item>
+        <item>П\'ятихатки</item>
+        <item>Павлоград</item>
+        <item>Первомайськ</item>
+        <item>Первомайськ</item>
+        <item>Первомайський</item>
+        <item>Перевальськ</item>
+        <item>Перемишляни</item>
+        <item>Перечин</item>
+        <item>Перещепине</item>
+        <item>Переяслав-Хмельницький</item>
+        <item>Першотравенськ</item>
+        <item>Петровське</item>
+        <item>Пирятин</item>
+        <item>Південне</item>
+        <item>Підгайці</item>
+        <item>Підгородне</item>
+        <item>Погребище</item>
+        <item>Покров</item>
+        <item>Пологи</item>
+        <item>Полонне</item>
+        <item>Полтава</item>
+        <item>Помічна</item>
+        <item>Попасна</item>
+        <item>Почаїв</item>
+        <item>Привілля</item>
+        <item>Прилуки</item>
+        <item>Приморськ</item>
+        <item>Прип\'ять</item>
+        <item>Пустомити</item>
+        <item>Путивль</item>
+        <item>Рава-Руська</item>
+        <item>Радехів</item>
+        <item>Радивилів</item>
+        <item>Радомишль</item>
+        <item>Рахів</item>
+        <item>Рені</item>
+        <item>Ржищів</item>
+        <item>Рівне</item>
+        <item>Ровеньки</item>
+        <item>Рогатин</item>
+        <item>Родинське</item>
+        <item>Рожище</item>
+        <item>Роздільна</item>
+        <item>Ромни</item>
+        <item>Рубіжне</item>
+        <item>Рудки</item>
+        <item>Саки</item>
+        <item>Самбір</item>
+        <item>Сарни</item>
+        <item>Свалява</item>
+        <item>Сватове</item>
+        <item>Свердловськ</item>
+        <item>Світловодськ</item>
+        <item>Світлодарськ</item>
+        <item>Святогірськ</item>
+        <item>Севастополь</item>
+        <item>Селидове</item>
+        <item>Семенівка</item>
+        <item>Середина-Буда</item>
+        <item>Сєвєродонецьк</item>
+        <item>Синельникове</item>
+        <item>Сіверськ</item>
+        <item>Сімферополь</item>
+        <item>Скадовськ</item>
+        <item>Скалат</item>
+        <item>Сквира</item>
+        <item>Сколе</item>
+        <item>Славута</item>
+        <item>Славутич</item>
+        <item>Слов\'янськ</item>
+        <item>Сміла</item>
+        <item>Снігурівка</item>
+        <item>Сніжне</item>
+        <item>Снятин</item>
+        <item>Сокаль</item>
+        <item>Сокиряни</item>
+        <item>Соледар</item>
+        <item>Соснівка</item>
+        <item>Старий Крим</item>
+        <item>Старий Самбір</item>
+        <item>Старобільськ</item>
+        <item>Старокостянтинів</item>
+        <item>Стаханов</item>
+        <item>Стебник</item>
+        <item>Сторожинець</item>
+        <item>Стрий</item>
+        <item>Судак</item>
+        <item>Судова Вишня</item>
+        <item>Суми</item>
+        <item>Суходільськ</item>
+        <item>Таврійськ</item>
+        <item>Тальне</item>
+        <item>Тараща</item>
+        <item>Татарбунари</item>
+        <item>Теплодар</item>
+        <item>Теребовля</item>
+        <item>Тернівка</item>
+        <item>Тернопіль</item>
+        <item>Тетіїв</item>
+        <item>Тисмениця</item>
+        <item>Тлумач</item>
+        <item>Токмак</item>
+        <item>Торез</item>
+        <item>Торецьк</item>
+        <item>Тростянець</item>
+        <item>Трускавець</item>
+        <item>Тульчин</item>
+        <item>Турка</item>
+        <item>Тячів</item>
+        <item>Угнів</item>
+        <item>Ужгород</item>
+        <item>Узин</item>
+        <item>Українка</item>
+        <item>Українськ</item>
+        <item>Ульяновка</item>
+        <item>Умань</item>
+        <item>Устилуг</item>
+        <item>Фастів</item>
+        <item>Феодосія</item>
+        <item>Харків</item>
+        <item>Харцизьк</item>
+        <item>Херсон</item>
+        <item>Хирів</item>
+        <item>Хмельницький</item>
+        <item>Хмільник</item>
+        <item>Ходорів</item>
+        <item>Хорол</item>
+        <item>Хоростків</item>
+        <item>Хотин</item>
+        <item>Христинівка</item>
+        <item>Хуст</item>
+        <item>Цюрупинськ</item>
+        <item>Часів Яр</item>
+        <item>Червоноград</item>
+        <item>Червонопартизанськ</item>
+        <item>Черкаси</item>
+        <item>Чернівці</item>
+        <item>Чернігів</item>
+        <item>Чигирин</item>
+        <item>Чоп</item>
+        <item>Чорнобиль</item>
+        <item>Чорноморськ</item>
+        <item>Чортків</item>
+        <item>Чугуїв</item>
+        <item>Чуднів</item>
+        <item>Шаргород</item>
+        <item>Шахтарськ</item>
+        <item>Шепетівка</item>
+        <item>Шостка</item>
+        <item>Шпола</item>
+        <item>Шумськ</item>
+        <item>Щастя</item>
+        <item>Щолкіне</item>
+        <item>Щорс</item>
+        <item>Южне</item>
+        <item>Южноукраїнськ</item>
+        <item>Юнокомунарівськ</item>
+        <item>Яворів</item>
+        <item>Яготин</item>
+        <item>Ялта</item>
+        <item>Ямпіль</item>
+        <item>Яремче</item>
+
+        <item>Одеська область</item>
+        <item>Дніпропетровська область</item>
+        <item>Чернігівська область</item>
+        <item>Житомирська область</item>
+        <item>Полтавська область</item>
+        <item>Херсонська область</item>
+        <item>Харківська область</item>
+        <item>Київська область</item>
+        <item>Запорізька область</item>
+        <item>Луганська область</item>
+        <item>Донецька область</item>
+        <item>Вінницька область</item>
+        <item>Автономна Республіка Крим</item>
+        <item>Кiровоградська область</item>
+        <item>Чернівецька область</item>
+        <item>Закарпатська область</item>
+        <item>Тернопільська область</item>
+        <item>Івано-Франківська область</item>
+        <item>Рівненська область</item>
+        <item>Волинська область</item>
+        <item>Хмельницька область</item>
+        <item>Черкаська область</item>
+        <item>Львівська область</item>
+        <item>Сумська область</item>
+        <item>Миколаївська область</item>
+
+
+
+
+
+    </string-array>
+
+</resources>

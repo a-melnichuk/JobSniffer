@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""
+        android:background="#fff"
+        android:id="@+id/background"
+        android:layout_alignTop="@+id/container"
+        android:layout_alignBottom="@+id/container" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <ImageView
+
+        android:src="@mipmap/ic_location_on_48dp"
+        android:layout_width="@dimen/job_icon_size"
+        android:layout_height="@dimen/job_icon_size"
+        android:id="@+id/icon_location"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:layout_marginRight="@dimen/job_icon_margin_right"
+        android:layout_marginEnd="@dimen/job_icon_margin_right"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New TeNeTextNew TextNew TextNew TextNew TextNew Text"
+        android:id="@+id/text_location"
+        android:layout_toRightOf="@+id/icon_location"
+        android:layout_toEndOf="@+id/icon_location"
+        android:layout_alignTop="@+id/icon_location" />
+
+    <ImageView
+        android:layout_marginRight="@dimen/job_icon_margin_right"
+        android:layout_marginEnd="@dimen/job_icon_margin_right"
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:src="@mipmap/ic_business_48dp"
+        android:layout_width="@dimen/job_icon_size"
+        android:layout_height="@dimen/job_icon_size"
+        android:id="@+id/icon_company"
+        android:layout_below="@+id/text_location"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text_company"
+        android:layout_toRightOf="@+id/icon_company"
+        android:layout_toEndOf="@+id/icon_company"
+        android:layout_alignTop="@+id/icon_company" />
+
+
+
+    <ImageView
+        android:layout_marginRight="@dimen/job_icon_margin_right"
+        android:layout_marginEnd="@dimen/job_icon_margin_right"
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:src="@mipmap/ic_work_48dp"
+        android:layout_width="@dimen/job_icon_size"
+        android:layout_height="@dimen/job_icon_size"
+        android:id="@+id/icon_employment_type"
+        android:layout_below="@+id/text_company"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text_employment_type"
+        android:layout_toRightOf="@+id/icon_employment_type"
+        android:layout_toEndOf="@+id/icon_employment_type"
+        android:layout_alignTop="@+id/icon_employment_type" />
+
+    <ImageView
+        android:layout_marginRight="@dimen/job_icon_margin_right"
+        android:layout_marginEnd="@dimen/job_icon_margin_right"
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:src="@mipmap/ic_link_48dp"
+        android:layout_width="@dimen/job_icon_size"
+        android:layout_height="@dimen/job_icon_size"
+        android:id="@+id/icon_link"
+        android:layout_below="@+id/text_employment_type"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text_link"
+        android:layout_toRightOf="@+id/icon_link"
+        android:layout_toEndOf="@+id/icon_link"
+        android:layout_alignTop="@+id/icon_link" />
+
+
+    <ImageView
+        android:layout_marginRight="@dimen/job_icon_margin_right"
+        android:layout_marginEnd="@dimen/job_icon_margin_right"
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:src="@mipmap/ic_attach_money_48dp"
+        android:layout_width="@dimen/job_icon_size"
+        android:layout_height="@dimen/job_icon_size"
+        android:id="@+id/icon_salary"
+        android:layout_below="@+id/text_link"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text_salary"
+        android:layout_toRightOf="@+id/icon_salary"
+        android:layout_toEndOf="@+id/icon_salary"
+        android:layout_alignTop="@+id/icon_salary" />
+
+
+    <TextView
+        android:layout_marginTop="@dimen/job_icon_margin_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/text_description"
+        android:layout_below="@+id/text_salary" />
+</RelativeLayout>
+
+</RelativeLayout>

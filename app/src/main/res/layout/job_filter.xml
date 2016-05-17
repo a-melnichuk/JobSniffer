@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/filter"
+        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:textColor="#fff"
+        android:singleLine="false"
+        android:typeface="normal"
+        android:elegantTextHeight="false"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:id="@+id/text_location"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <AutoCompleteTextView
+        android:imeOptions="flagNoExtractUi"
+        android:singleLine="true"
+        android:id="@+id/input_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_location" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary"
+        android:id="@+id/text_salary"
+        android:layout_below="@+id/input_location"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:imeOptions="flagNoExtractUi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/input_salary"
+        android:layout_below="@+id/text_salary"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radius"
+        android:id="@+id/text_radius"
+        android:layout_below="@+id/input_salary"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:entries="@array/dist_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_radius"
+        android:layout_below="@+id/text_radius"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
