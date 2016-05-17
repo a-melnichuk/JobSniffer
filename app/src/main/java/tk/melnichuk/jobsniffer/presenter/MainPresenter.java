@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 import tk.melnichuk.jobsniffer.fragment.JobListFragment;
+
 import tk.melnichuk.jobsniffer.model.JoobleJobListRequest;
-import tk.melnichuk.jobsniffer.model.JoobleJobListResponse;
+
 import tk.melnichuk.jobsniffer.model.MainModel;
 import tk.melnichuk.jobsniffer.view.MainView;
 
@@ -26,7 +26,6 @@ public class MainPresenter {
 
         mModel = new MainModel(this);
         mView = new MainView(this, activity);
-
     }
 
 
@@ -40,25 +39,14 @@ public class MainPresenter {
 
         mModel.getJobList().subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(new Subscriber<JoobleJobListResponse>() {
-                @Override
-                public void onCompleted() {
-
-                }
-
-                @Override
-                public void onError(Throwable e) {
-                    mView.showError(e);
-                }
-
-                @Override
-                public void onNext(JoobleJobListResponse joobleJobListResponse) {
-
-                    mModel.updateNumPages(joobleJobListResponse.getTotalCount());
+            .subscribe(
+                r-> {
+                    mModel.updateNumPages(r.getTotalCount());
                     mView.update(mModel.getNumPages(), page, isNewKeywordInput);
-
-                }
-            });
+                }, e-> {
+                    mView.showError(e);
+                }, ()-> {}
+            );
     }
 
     public void onFilterValuesRequested(View v) {
@@ -86,36 +74,33 @@ public class MainPresenter {
         request.setPage(page);
 
         fragment.showProgressBar();
-        mModel.getJobList().subscribeOn(Schedulers.newThread())
+
+        mModel.getJobList()
+            .subscribeOn(Schedulers.newThread())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(new Subscriber<JoobleJobListResponse>() {
-                @Override
-                public void onCompleted() {
+            .subscribe(
+                r -> {
+                    mModel.updateNumPages(r.getTotalCount());
+
+                    fragment.update(r.getJobs());
+                }, e -> {
+                    mView.showError(e);
+                    fragment.hideProgressBar();
+                }, () -> {
                     fragment.hideProgressBar();
                 }
+            );
 
-                @Override
-                public void onError(Throwable e) {
-                    mView.showError(e);
-                }
-
-                @Override
-                public void onNext(JoobleJobListResponse joobleJobListResponse) {
-
-                    mModel.updateNumPages(joobleJobListResponse.getTotalCount());
-                    fragment.update(joobleJobListResponse.getJobs());
-                }
-            });
     }
 
     public void onCreate(Bundle savedInstanceState){
         JoobleJobListRequest request = mModel.getRequest();
         if(savedInstanceState == null)  {
-            request.setKeywords("программист");
+            request.setKeywords("програміст");
             request.setPage(1);
             mView.setSearchInput(request.getKeywords());
         } else {
-            request.setKeywords( savedInstanceState.getString("keywords", "программист") );
+            request.setKeywords( savedInstanceState.getString("keywords", "програміст") );
             request.setLocation( savedInstanceState.getString("location") );
             request.setSalary( savedInstanceState.getString("salary") );
             request.setRadius( savedInstanceState.getString("radius") );
@@ -131,10 +116,6 @@ public class MainPresenter {
         outState.putString("salary", request.getSalary());
         outState.putString("radius", request.getRadius());
         outState.putInt("page", mView.getPage() );
-
-    }
-
-    public void onDestroy(){
 
     }
 

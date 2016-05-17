@@ -1,17 +1,12 @@
 package tk.melnichuk.jobsniffer.view;
 
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -24,6 +19,7 @@ import android.widget.TextView;
 import java.io.IOException;
 
 import retrofit2.adapter.rxjava.HttpException;
+
 import tk.melnichuk.jobsniffer.R;
 import tk.melnichuk.jobsniffer.adapter.JobListPagerAdapter;
 import tk.melnichuk.jobsniffer.fragment.JobListFragment;
@@ -197,9 +193,7 @@ public class MainView {
             if(index != -1) {
                 radiusView.setSelection(index, true);
             }
-
         }
-
     }
 
     public void showPopup(){
@@ -241,10 +235,5 @@ public class MainView {
             mPagination.setText(getPaginationString());
     }
 
-
-
-
-
-
-
+    
 }

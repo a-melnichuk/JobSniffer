@@ -1,23 +1,20 @@
 package tk.melnichuk.jobsniffer.adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import tk.melnichuk.jobsniffer.R;
 import tk.melnichuk.jobsniffer.model.Job;
-import tk.melnichuk.jobsniffer.view.MainView;
 
 /**
  * Created by al on 12.05.16.

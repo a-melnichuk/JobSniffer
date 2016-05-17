@@ -13,14 +13,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitServiceFactory {
     public static <T> T getNewRetrofitServiceInstance(Class<T> tClass, String baseUrl){
       //  HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-      //  interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        // OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+       // interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+       //  OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(baseUrl)
-               // .client(client)
+             //   .client(client)
                 .build();
 
         return retrofit.create(tClass);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JobSniffer</string>
+    <string name="app_name">Пошук роботи</string>
     <string name="search_filter">Фільтр пошуку</string>
     <string name="no_jobs_found">Вакансій не знайдено</string>
     <string name="err_unknown">Помилка</string>
