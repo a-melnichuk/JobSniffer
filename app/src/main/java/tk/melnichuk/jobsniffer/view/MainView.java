@@ -235,5 +235,5 @@ public class MainView {
             mPagination.setText(getPaginationString());
     }
 
-    
+
 }

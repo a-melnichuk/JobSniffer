@@ -25,7 +25,7 @@ import tk.melnichuk.jobsniffer.model.JoobleJobListResponse;
 public interface JoobleService {
 
     String BASE_URL =  "http://ua.jooble.org/api/";
-    String API_KEY  = "<YOUR_API_KEY_HERE>";
+    String API_KEY  = "43ca2686-01bb-4a02-9cf0-cf5af24ea5cc";
 
     @Headers( "Content-Type: application/x-www-form-urlencoded" )
     @POST("{apiKey}")
